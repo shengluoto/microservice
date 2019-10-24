@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-eureka" />
+        <module name="demo-eureka-server" />
+        <module name="demo-eureka-service-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo-eureka" target="1.8" />
+      <module name="demo-eureka-server" target="1.8" />
+      <module name="demo-eureka-service-user" target="1.8" />
       <module name="microservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
