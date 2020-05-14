@@ -10,4 +10,5 @@ class DemoEurekaServiceUserApplicationTests {
 	void contextLoads() {
 	}
 
+
 }

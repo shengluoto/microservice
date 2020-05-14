@@ -1,8 +1,11 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by TCK on 2020/5/3.
  */
 public class YoungGC {
-    public static void run(String[] args) {
+    public static void main(String[] args) {
         byte[] array1 = new byte[2 * 1024 * 1024];
         array1 = new byte[2 * 1024 * 1024];
         array1 = new byte[2 * 1024 * 1024];
@@ -15,4 +18,5 @@ public class YoungGC {
         array3 = null;
         byte[] array4 = new byte[2 * 1024 * 1024];
     }
+
 }
