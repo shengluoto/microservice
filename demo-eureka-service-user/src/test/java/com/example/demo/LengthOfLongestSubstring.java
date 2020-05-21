@@ -112,36 +112,31 @@ public class LengthOfLongestSubstring {
     }
 
     public static int romanToInt(String s) {
-        Map<Integer, Integer> combinationMap = new HashMap<>();
-        combinationMap.put('I'+'V', 4);
-        combinationMap.put('I'+'X', 9);
-        combinationMap.put('X'+'L', 40);
-        combinationMap.put('X'+'C', 90);
-        combinationMap.put('C'+'D', 400);
-        combinationMap.put('C'+'M', 900);
-        Map<Character, Integer> singleMap = new HashMap<>();
-        singleMap.put('I', 1);
-        singleMap.put('V', 5);
-        singleMap.put('X', 10);
-        singleMap.put('L', 50);
-        singleMap.put('C', 100);
-        singleMap.put('D', 500);
-        singleMap.put('M', 1000);
-        int length = s.length();
-        int start = 0;
-        int num = 0;
+        Map<String, Integer> combinationMap = new HashMap<>();
+        combinationMap.put("IV", 4);
+        combinationMap.put("IX", 9);
+        combinationMap.put("XL", 40);
+        combinationMap.put("XC", 90);
+        combinationMap.put("CD", 400);
+        combinationMap.put("CM", 900);
+        for (Map.Entry<String, Integer> entry : combinationMap.entrySet()) {
+            s = s.replaceAll(entry.getKey(), entry.getValue()+" ");
+        }
+        Map<String, Integer> singleMap = new HashMap<>();
+        singleMap.put("I", 1);
+        singleMap.put("V", 5);
+        singleMap.put("X", 10);
+        singleMap.put("L", 50);
+        singleMap.put("C", 100);
+        singleMap.put("D", 500);
+        singleMap.put("M", 1000);
+        for (Map.Entry<String, Integer> entry : singleMap.entrySet()) {
+            s = s.replaceAll(entry.getKey(), entry.getValue()+" ");
+        }
+        String[] array = s.split(" ");
         int result = 0;
-        Integer tempStr = null;
-        while (start < length) {
-            tempStr = s.charAt(start)+s.charAt(start+1);
-            if (combinationMap.containsKey(tempStr)) {
-                num = combinationMap.get(tempStr);
-                start +=2;
-            } else {
-                num = singleMap.get(s.charAt(start));
-                ++start;
-            }
-            result += num;
+        for (String s1 : array) {
+            result += Integer.parseInt(s1);
         }
         return result;
     }
