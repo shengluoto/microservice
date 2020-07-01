@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo-eureka-server/demo-eureka.iml" filepath="$PROJECT_DIR$/demo-eureka-server/demo-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-eureka-service-user/demo-eureka-service-user.iml" filepath="$PROJECT_DIR$/demo-eureka-service-user/demo-eureka-service-user.iml" />
       <module fileurl="file://D:\gitRepority\microservice\demo-eureka-server\demo-eurekaServer.iml" filepath="D:\gitRepority\microservice\demo-eureka-server\demo-eurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice.iml" filepath="$PROJECT_DIR$/microservice.iml" />
     </modules>
   </component>

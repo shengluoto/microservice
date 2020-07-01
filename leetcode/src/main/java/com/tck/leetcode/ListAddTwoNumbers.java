@@ -1,9 +1,7 @@
-package com.example.demo;
+package com.tck.leetcode;
 
 
-import org.junit.Test;
-
-class ListAddTest {
+class ListAddTwoNumbers {
 
 	public class ListNode {
 		int val;
@@ -40,7 +38,6 @@ class ListAddTest {
 		return dummyHead.next;
 	}
 
-	@Test
 	public void test() {
 		ListNode l1 = new ListNode(2);
 		l1.next = new ListNode(4);

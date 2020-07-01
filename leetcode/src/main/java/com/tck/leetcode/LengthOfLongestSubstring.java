@@ -1,9 +1,6 @@
-package com.example.demo;
+package com.tck.leetcode;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
@@ -109,39 +106,5 @@ public class LengthOfLongestSubstring {
             result = result*10 + remain;
         }
         return x == result ? true : false;
-    }
-
-    public static int romanToInt(String s) {
-        Map<String, Integer> combinationMap = new HashMap<>();
-        combinationMap.put("IV", 4);
-        combinationMap.put("IX", 9);
-        combinationMap.put("XL", 40);
-        combinationMap.put("XC", 90);
-        combinationMap.put("CD", 400);
-        combinationMap.put("CM", 900);
-        for (Map.Entry<String, Integer> entry : combinationMap.entrySet()) {
-            s = s.replaceAll(entry.getKey(), entry.getValue()+" ");
-        }
-        Map<String, Integer> singleMap = new HashMap<>();
-        singleMap.put("I", 1);
-        singleMap.put("V", 5);
-        singleMap.put("X", 10);
-        singleMap.put("L", 50);
-        singleMap.put("C", 100);
-        singleMap.put("D", 500);
-        singleMap.put("M", 1000);
-        for (Map.Entry<String, Integer> entry : singleMap.entrySet()) {
-            s = s.replaceAll(entry.getKey(), entry.getValue()+" ");
-        }
-        String[] array = s.split(" ");
-        int result = 0;
-        for (String s1 : array) {
-            result += Integer.parseInt(s1);
-        }
-        return result;
-    }
-
-    public static void main(String[] args) {
-        LengthOfLongestSubstring.romanToInt("III");
     }
 }
